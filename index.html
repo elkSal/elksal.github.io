@@ -1,15 +1,27 @@
 <html>
   <head>
     <title>hCaptcha</title>
+<!-- script src and hcaptcha are done as per online guide https://www.hcaptcha.com/post/implementing-hcaptcha-in-your-flutter-app -->
+
     <script src="https://js.hcaptcha.com/1/api.js"" async defer></script>
+
+<!-- CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+
+<!-- Meta tag for resizing based on device -->
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+
   </head>
   <body style='background-color: black;'>
     <div style='height: 200px;'></div>
+     <div class = "wrapper">
+      <div class = "center">
       <div class="h-captcha" 
         data-sitekey="9a48ff65-ec53-429c-b298-e88a575c3ad5"
-        data-size="compact"
-        data-theme="dark"
-        data-callback="captchaCallback"></div>
+        data-callback="captchaCallback">
+      </div>
+      </div>	
+     </div>
     <script>
       function captchaCallback(response) {
         if (typeof Captcha!=="undefined") {
